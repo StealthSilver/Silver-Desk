@@ -5,11 +5,12 @@ import Featured from "../components/Featured";
 import Footer from "../components/Footer";
 
 const Home = () => (
-  <div>
+  <div className="flex flex-col min-h-screen bg-white dark:bg-gray-950">
     <Header />
     <Navbar />
     <Hero />
     <Featured />
+    <div className="flex-grow" /> 
     <Footer />
   </div>
 );
