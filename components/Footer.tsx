@@ -1,5 +1,5 @@
 const Footer: React.FC = () => (
-  <footer className="bg-gray-900 text-white text-center py-6 mt-12">
+  <footer className="bg-white text-black text-center py-2 mt-12 shadow-lg">
     <p>&copy; {new Date().getFullYear()} Silver&apos;s Desk. All rights reserved.</p>
   </footer>
 );

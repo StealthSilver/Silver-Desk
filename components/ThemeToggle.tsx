@@ -1,6 +1,8 @@
 "use client"
 
 import { useEffect, useState } from 'react';
+import { Sun, Moon } from "lucide-react";
+
 
 const ThemeToggle = () => {
   const [theme, setTheme] = useState('light');
@@ -31,10 +33,10 @@ const ThemeToggle = () => {
   return (
     <button
       onClick={toggleTheme}
-      className="rounded px-4 py-1 bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 border border-gray-400 dark:border-gray-700 shadow hover:bg-gray-300 dark:hover:bg-gray-700 transition"
+      className="rounded px-2 py-1 bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 border border-gray-400 dark:border-gray-700 shadow hover:bg-gray-300 dark:hover:bg-gray-700 transition"
       aria-label="Toggle Theme"
     >
-      {theme === 'dark' ? '🌙 Dark' : '☀️ Light'}
+      {theme === 'dark' ? <Moon color="white" size={20} /> : <Sun color="gray" size={20} />}
     </button>
   );
 };

@@ -1,12 +1,41 @@
-import Link from 'next/link';
+"use client";
 
-const Navbar: React.FC = () => (
-  <nav className="bg-gray-800 text-white">
-    <ul className="flex justify-center space-x-8 py-5 text-lg font-medium">
-      <li><Link href="/essays" className="hover:text-cyan-400">Essays</Link></li>
-      <li><Link href="/poems" className="hover:text-cyan-400">Poems</Link></li>
-      <li><Link href="/stories" className="hover:text-cyan-400">Stories</Link></li>
-    </ul>
-  </nav>
-);
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+
+const navItems = [
+  { name: "Essays", href: "/essays" },
+  { name: "Poems", href: "/poems" },
+  { name: "Stories", href: "/stories" },
+];
+
+const Navbar: React.FC = () => {
+  const pathname = usePathname();
+
+  return (
+    <nav className="bg-white dark:bg-gray-900 py-4 px-6">
+      <ul className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-4">
+        {navItems.map(({ name, href }) => {
+          const isActive = pathname === href;
+          return (
+            <li key={href}>
+              <Link href={href}>
+                <button
+                  className={`px-4 py-2 rounded font-medium transition 
+                    ${isActive 
+                      ? "bg-cyan-500 text-white shadow-md" 
+                      : "bg-gray-700 text-gray-200 hover:bg-cyan-600 hover:text-white"}`}
+                  aria-current={isActive ? "page" : undefined}
+                >
+                  {name}
+                </button>
+              </Link>
+            </li>
+          );
+        })}
+      </ul>
+    </nav>
+  );
+};
+
 export default Navbar;
