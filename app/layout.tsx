@@ -8,8 +8,8 @@ export const font = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Bimal Paan Masala",
-  description: "UI/UX Workshop",
+  title: "Silver's Desk",
+  description: "The place where creativity meets relevence",
 };
 
 export default function RootLayout({

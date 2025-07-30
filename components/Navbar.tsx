@@ -1,27 +1,12 @@
-import React from "react";
-import Link from "next/link";
+import Link from 'next/link';
 
-const Navbar = () => {
-  return (
-    <nav className="sticky top-0 right-0 z-50 max-w-7xl mx-auto py-4 px-4 flex justify-between items-center">
-      <Link href="/">
-        <h1 className="text-2xl font-extrabold text-orange-600 tracking-tighter">
-          bimal
-        </h1>
-      </Link>
-      <div className="flex items-center gap-4">
-        <Link
-          href="#products"
-          className="text-orange-950 font-medium tracking-tight hover:text-orange-900 transition-all duration-300"
-        >
-          Products
-        </Link>
-        <button className="bg-orange-600 text-white font-medium px-4 py-2 hover:bg-orange-700 transition-all duration-300 rounded-lg">
-          Login
-        </button>
-      </div>
-    </nav>
-  );
-};
-
+const Navbar: React.FC = () => (
+  <nav className="bg-gray-800 text-white">
+    <ul className="flex justify-center space-x-8 py-5 text-lg font-medium">
+      <li><Link href="/essays" className="hover:text-cyan-400">Essays</Link></li>
+      <li><Link href="/poems" className="hover:text-cyan-400">Poems</Link></li>
+      <li><Link href="/stories" className="hover:text-cyan-400">Stories</Link></li>
+    </ul>
+  </nav>
+);
 export default Navbar;

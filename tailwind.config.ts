@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import { catamaran } from "./app/layout";
 
 const config: Config = {
   darkMode: ["class"],
@@ -9,6 +10,10 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        khula: ['Khula', 'sans-serif'], 
+        catamaran: ['Catamaran', 'sans-serif']
+      },
       colors: {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
@@ -59,4 +64,5 @@ const config: Config = {
     },
   },
 };
+
 export default config;
