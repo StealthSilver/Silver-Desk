@@ -13,6 +13,9 @@ export const font = DM_Sans({
 export const metadata: Metadata = {
   title: "Silver's Desk",
   description: "The place where creativity meets relevance",
+  icons: {
+    icon: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({
