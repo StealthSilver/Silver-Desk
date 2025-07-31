@@ -24,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${font.className} min-h-screen bg-white text-gray-900 dark:bg-gray-950 dark:text-gray-100`}
+        className={`${font.className} min-h-screen bg-white text-gray-900 dark:bg-gray-950 dark:text-gray-100 `}
       >
         <div className="flex flex-col min-h-screen relative max-h-screen overflow-hidden pr-12">
           {/* Header includes navbar now */}
